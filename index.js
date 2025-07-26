@@ -1,4 +1,4 @@
-const onlineGroup=['932575386','590816457','977422334','1023109248','461827522','825122765','192357010'];
+const onlineGroup=['192357010'];
 require('module-alias/register');
 require('dotenv').config();
 const {chat,spark,deepseek,gpt,deepseek_official}= require('./modules/modelAPI.js');
@@ -192,11 +192,6 @@ function handleGroupMessage(userId, groupId, message, rev_data) {
           }
           send_to_bot(`http://${process.env.frameworkHost}:${process.env.frameworkPort}/send_group_msg?group_id=${groupId}&message=${urlencode.encode(`[CQ:at,qq=${userId}接受到您的提问，正在为您查询，请等待1-3分钟]`)}`);
           handleResponse(result, groupId,userId);
-          /*const method = userStatusMap.get(userId).method;
-        const api = method === 0 ? 'jj' : 'mm';
-        const url = `https://apii.lolimi.cn/api/${api}ai/${api}?key=${process.env.OTHER_API_KEY}&msg=${msg}`;
-        const result = await fetchData(url);
-        handleResponse(result, groupId);*/
         } catch (error) {
           console.error('Chat API调用失败:', error);
           handleResponse({ code: 500, data: '服务暂时不可用' }, groupId);
