@@ -10,3 +10,15 @@
 ###### 3.复制.env.default，命名为.env，打开env配置APIkey信息，默认只需要配置Deepseek
 ###### 4.首次运行在根目录执行npm install
 ###### 5.使用node index.js启动项目
+
+## License
+
+The `yuxiaojiao` is open-source software licensed under the AGPL-3.0 license.
+
+我们不欢迎，也不允许任何怀有以下目的的人或组织使用本项目
+
+1.以出售校园卡等兼职为目的的群聊
+
+2.从事诈骗，色情行业的群聊
+
+##### 本项目最终解释权归重庆交通大学电子创新协会创新部所有，由青州正寰电子科技有限公司协助开发
